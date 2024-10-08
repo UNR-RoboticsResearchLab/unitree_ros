@@ -1,0 +1,190 @@
+#hardware_interface:
+#  joints:
+#    - left_shoulder_pitch_joint
+#    - left_shoulder_roll_joint
+#    - left_shoulder_yaw_joint
+#    - left_elbow_roll_joint
+#    - left_elbow_pitch_joint
+#    - right_elbow_pitch_joint
+#    - right_elbow_roll_joint
+#    - right_shoulder_pitch_joint
+#    - right_shoulder_roll_joint
+#    - right_shoulder_yaw_joint
+#  sim_control_mode: 1
+#joint_state_controller:
+#  type: joint_state_controller/JointStateController
+#  publish_rate: 50
+#controller_list:
+#  - name: left_arm_controller
+#    action_ns: follow_joint_trajectory
+#    type: FollowJointTrajectory
+#    default: true
+#    joints:
+#    - left_shoulder_pitch_joint
+#    - left_shoulder_roll_joint
+#    - left_shoulder_yaw_joint
+#    - left_elbow_roll_joint
+#    - left_elbow_pitch_joint
+#  - name: right_arm_controller
+#    action_ns: follow_joint_trajectory
+#    type: FollowJointTrajectory
+#    default: true
+#    joints:
+#    - right_shoulder_pitch_joint
+#    - right_shoulder_roll_joint
+#    - right_shoulder_yaw_joint
+#    - right_elbow_roll_joint
+#    - right_elbow_pitch_joint
+    
+#controller_manager:
+#  ros__parameters:
+#    update_rate: 100.0
+
+#joint_state_controller:
+#  type: joint_state_controller/JointStateController
+#  publish_rate: 50
+
+#left_hip_pitch_controller:
+#  type: effort_controllers/JointPositionController
+#  joint: left_hip_pitch_joint
+#  pid: {p: 100.0, i: 0.01, d: 10.0}
+hardware_interface:
+  joints:
+    - left_shoulder_pitch_joint
+    - left_shoulder_roll_joint
+    - left_shoulder_yaw_joint
+    - left_elbow_roll_joint
+    - left_elbow_pitch_joint
+    - right_elbow_pitch_joint
+    - right_elbow_roll_joint
+    - right_shoulder_pitch_joint
+    - right_shoulder_roll_joint
+    - right_shoulder_yaw_joint
+    - left_hip_pitch_joint
+    - left_hip_roll_joint
+    - left_hip_yaw_joint
+    - left_knee_joint
+    - left_ankle_pitch_joint
+    - left_ankle_roll_joint
+    - right_hip_pitch_joint
+    - right_hip_roll_joint
+    - right_hip_yaw_joint
+    - right_knee_joint
+    - right_ankle_pitch_joint
+    - right_ankle_roll_joint
+  sim_control_mode: 1
+
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+# controller_list:
+#   - name: left_arm_controller
+#     action_ns: follow_joint_trajectory
+#     type: FollowJointTrajectory
+#     default: true
+#     joints:
+#       - left_shoulder_pitch_joint
+#       - left_shoulder_roll_joint
+#       - left_shoulder_yaw_joint
+#       - left_elbow_roll_joint
+#       - left_elbow_pitch_joint
+#   - name: right_arm_controller
+#     action_ns: follow_joint_trajectory
+#     type: FollowJointTrajectory
+#     default: true
+#     joints:
+#       - right_shoulder_pitch_joint
+#       - right_shoulder_roll_joint
+#       - right_shoulder_yaw_joint
+#       - right_elbow_roll_joint
+#       - right_elbow_pitch_joint
+#   - name: left_leg_controller
+#     action_ns: follow_joint_trajectory
+#     type: FollowJointTrajectory
+#     joints:
+#       - left_hip_pitch_joint
+#       - left_hip_roll_joint
+#       - left_hip_yaw_joint
+#       - left_knee_joint
+#       - left_ankle_pitch_joint
+#       - left_ankle_roll_joint
+#   - name: right_leg_controller
+#     action_ns: follow_joint_trajectory
+#     type: FollowJointTrajectory
+#     joints:
+#       - right_hip_pitch_joint
+#       - right_hip_roll_joint
+#       - right_hip_yaw_joint
+#       - right_knee_joint
+#       - right_ankle_pitch_joint
+#       - right_ankle_roll_joint
+
+controller_manager:
+  ros__parameters:
+    update_rate: 100.0
+
+# joint_state_controller:
+#   type: joint_state_controller/JointStateController
+#   publish_rate: 50
+
+left_hip_pitch_controller:
+  type: effort_controllers/JointPositionController
+  joint: left_hip_pitch_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+
+left_hip_roll_controller:
+  type: effort_controllers/JointPositionController
+  joint: left_hip_roll_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+
+left_hip_yaw_controller:
+  type: effort_controllers/JointPositionController
+  joint: left_hip_yaw_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+
+left_knee_controller:
+  type: effort_controllers/JointPositionController
+  joint: left_knee_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+
+left_ankle_pitch_controller:
+  type: effort_controllers/JointPositionController
+  joint: left_ankle_pitch_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+
+left_ankle_roll_controller:
+  type: effort_controllers/JointPositionController
+  joint: left_ankle_roll_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+
+right_hip_pitch_controller:
+  type: effort_controllers/JointPositionController
+  joint: right_hip_pitch_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+
+right_hip_roll_controller:
+  type: effort_controllers/JointPositionController
+  joint: right_hip_roll_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+
+right_hip_yaw_controller:
+  type: effort_controllers/JointPositionController
+  joint: right_hip_yaw_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+
+right_knee_controller:
+  type: effort_controllers/JointPositionController
+  joint: right_knee_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+
+right_ankle_pitch_controller:
+  type: effort_controllers/JointPositionController
+  joint: right_ankle_pitch_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+
+right_ankle_roll_controller:
+  type: effort_controllers/JointPositionController
+  joint: right_ankle_roll_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+

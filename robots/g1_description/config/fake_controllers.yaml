@@ -1,0 +1,125 @@
+controller_list:
+  - name: fake_left_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - left_shoulder_pitch_joint
+      - left_shoulder_roll_joint
+      - left_shoulder_yaw_joint
+      - left_elbow_pitch_joint
+      - left_elbow_roll_joint
+  - name: fake_right_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - right_shoulder_pitch_joint
+      - right_shoulder_roll_joint
+      - right_shoulder_yaw_joint
+      - right_elbow_pitch_joint
+      - right_elbow_roll_joint
+  - name: fake_torso_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - torso_joint
+  - name: fake_pelvis_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - fixed_frame
+  - name: fake_left_hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - left_five_joint
+      - left_six_joint
+      - left_three_joint
+      - left_four_joint
+      - left_zero_joint
+      - left_one_joint
+      - left_two_joint
+  - name: fake_right_hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - right_five_joint
+      - right_six_joint
+      - right_three_joint
+      - right_four_joint
+      - right_zero_joint
+      - right_one_joint
+      - right_two_joint
+  - name: fake_Hands_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - left_five_joint
+      - left_six_joint
+      - left_three_joint
+      - left_four_joint
+      - left_zero_joint
+      - left_one_joint
+      - left_two_joint
+      - right_five_joint
+      - right_six_joint
+      - right_three_joint
+      - right_four_joint
+      - right_zero_joint
+      - right_one_joint
+      - right_two_joint
+  - name: fake_body_movement_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - fixed_frame
+      - torso_joint
+      - left_shoulder_pitch_joint
+      - left_shoulder_roll_joint
+      - left_shoulder_yaw_joint
+      - left_elbow_pitch_joint
+      - left_elbow_roll_joint
+      - left_five_joint
+      - left_six_joint
+      - left_three_joint
+      - left_four_joint
+      - left_zero_joint
+      - left_one_joint
+      - left_two_joint
+      - right_shoulder_pitch_joint
+      - right_shoulder_roll_joint
+      - right_shoulder_yaw_joint
+      - right_elbow_pitch_joint
+      - right_elbow_roll_joint
+      - right_five_joint
+      - right_six_joint
+      - right_three_joint
+      - right_four_joint
+      - right_zero_joint
+      - right_one_joint
+      - right_two_joint
+  - name: fake_upper_body_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - torso_joint
+      - left_five_joint
+      - left_six_joint
+      - left_three_joint
+      - left_four_joint
+      - left_zero_joint
+      - left_one_joint
+      - left_two_joint
+      - right_five_joint
+      - right_six_joint
+      - right_three_joint
+      - right_four_joint
+      - right_zero_joint
+      - right_one_joint
+      - right_two_joint
+  - name: fake_arms_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - left_shoulder_pitch_joint
+      - left_shoulder_roll_joint
+      - left_shoulder_yaw_joint
+      - left_elbow_pitch_joint
+      - left_elbow_roll_joint
+      - right_shoulder_pitch_joint
+      - right_shoulder_roll_joint
+      - right_shoulder_yaw_joint
+      - right_elbow_pitch_joint
+      - right_elbow_roll_joint
+initial:  # Define initial robot poses per group
+  - group: upper_body
+    pose: signer_begins
