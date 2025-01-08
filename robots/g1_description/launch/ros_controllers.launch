@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find g1_description)/config/ros_controllers.yaml" command="load"/>
+
+  <!-- Load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" args="joint_state_controller left_shoulder_pitch_joint_controller left_shoulder_roll_joint_controller left_shoulder_yaw_joint_controller left_elbow_roll_joint_controller left_elbow_pitch_joint_controller left_hip_pitch_joint_controller left_hip_roll_joint_controller left_hip_yaw_joint_controller left_knee_joint_controller left_ankle_pitch_joint_controller left_ankle_roll_joint_controller right_shoulder_pitch_joint_controller right_shoulder_roll_joint_controller right_shoulder_yaw_joint_controller right_elbow_roll_joint_controller right_elbow_pitch_joint_controller right_hip_pitch_joint_controller right_hip_roll_joint_controller right_hip_yaw_joint_controller right_knee_joint_controller right_ankle_pitch_joint_controller right_ankle_roll_joint_controller"/>
+
+</launch>

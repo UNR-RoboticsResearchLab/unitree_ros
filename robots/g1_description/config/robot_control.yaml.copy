@@ -1,0 +1,117 @@
+g1_gazebo:
+    # Publish all joint states -----------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 1000  
+
+    left_shoulder_pitch_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint1
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    left_shoulder_roll_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint2
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    left_shoulder_yaw_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint3
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    left_elbow_roll_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint4
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    left_elbow_pitch_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint5
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    left_hip_pitch_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint5
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    left_hip_roll_joint_controller: 
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint5
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    left_hip_yaw_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint5
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    left_knee_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint5
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    left_ankle_pitch_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint5
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+        
+    left_ankle_roll_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint5
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+
+    right_shoulder_pitch_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint1
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    right_shoulder_roll_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint2
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    right_shoulder_yaw_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint3
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    right_elbow_roll_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint4
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    right_elbow_pitch_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint5
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+
+    right_hip_pitch_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint5
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    right_hip_roll_joint_controller: 
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint5
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    right_hip_yaw_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint5
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    right_knee_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint5
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+
+    right_ankle_pitch_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint5
+        pid: {p: 300.0, i: 0.0, d: 5.0}
+        
+    right_ankle_roll_joint_controller:
+        type: unitree_legged_control/UnitreeJointController
+        joint: joint5
+        pid: {p: 300.0, i: 0.0, d: 5.0}
