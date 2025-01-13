@@ -1,0 +1,49 @@
+import rospy
+from visualization_msgs.msg import Marker
+
+def main():
+    rospy.init_node('basic_shapes', anonymous=True)
+    marker_pub = rospy.Publisher('visualization_marker', Marker, queue_size=10)
+    rate = rospy.Rate(1)  # 1 Hz
+
+    shape = Marker.CUBE  # Set initial shape type to be a cube
+
+    while not rospy.is_shutdown():
+        marker = Marker()
+        marker.header.frame_id = "torso_link"
+        marker.header.stamp = rospy.Time.now()
+
+        marker.ns = "basic_shapes"
+        marker.id = 0
+
+        marker.type = shape
+        marker.action = Marker.ADD
+
+        marker.pose.position.x = 0.4
+        marker.pose.position.y = 0.0
+        marker.pose.position.z = 0.25
+        marker.pose.orientation.x = 0.0
+        marker.pose.orientation.y = 0.0
+        marker.pose.orientation.z = 1.0
+        marker.pose.orientation.w = 1.0
+
+        marker.scale.x = 0.5
+        marker.scale.y = 0.0
+        marker.scale.z = 0.5
+
+        marker.color.r = 229
+        marker.color.g = 235
+        marker.color.b = 231
+        marker.color.a = 0.4
+
+        marker.lifetime = rospy.Duration(1)
+        
+        marker_pub.publish(marker)
+
+        rate.sleep()
+
+if __name__ == '__main__':
+    try:
+        main()
+    except rospy.ROSInterruptException:
+        pass
