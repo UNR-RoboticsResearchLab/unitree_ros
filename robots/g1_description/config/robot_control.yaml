@@ -111,6 +111,99 @@ g1_gazebo:
         gains:
             waist_yaw_joint: {p: 100.0, i: .5, d: 5.0}
 
+    left_hand_controller:
+        action_ns: follow_joint_trajectory
+        type: effort_controllers/JointTrajectoryController
+        default: true
+        constraints:
+          # New
+          # left_base_joint: {goal: .27}
+          # left_thumb_1_joint: {goal: .27}
+          # left_thumb_2_joint: {goal: .27}
+          # left_thumb_3_joint: {goal: .27}
+          # left_thumb_4_joint: {goal: .27}
+          # left_index_1_joint: {goal: .27}
+          # left_index_2_joint: {goal: .27}
+          # left_middle_1_joint: {goal: .27}
+          # left_middle_2_joint: {goal: .27}
+          # left_ring_1_joint: {goal: .27}
+          # left_ring_2_joint: {goal: .27}
+          # left_little_1_joint: {goal: .27}
+          # left_little_2_joint: {goal: .27}
+          #L_base_link_joint: {goal: .27}
+          L_thumb_proximal_yaw_joint: {goal: .27}
+          L_thumb_proximal_pitch_joint: {goal: .27}
+          L_thumb_intermediate_joint: {goal: .27}
+          L_thumb_distal_joint: {goal: .27}
+          L_index_proximal_joint: {goal: .27}
+          L_index_intermediate_joint: {goal: .27}
+          L_middle_proximal_joint: {goal: .27}
+          L_middle_intermediate_joint: {goal: .27}
+          L_ring_proximal_joint: {goal: .27}
+          L_ring_intermediate_joint: {goal: .27}
+          L_pinky_proximal_joint: {goal: .27}
+          L_pinky_intermediate_joint: {goal: .27}
+        joints:
+          # new joints
+          # - left_base_joint
+          # - left_thumb_1_joint
+          # - left_thumb_2_joint
+          # - left_thumb_3_joint
+          # - left_thumb_4_joint
+          # - left_index_1_joint
+          # - left_index_2_joint
+          # - left_middle_1_joint
+          # - left_middle_2_joint
+          # - left_ring_1_joint
+          # - left_ring_2_joint
+          # - left_little_1_joint
+          # - left_little_2_joint 
+          #- L_base_link_joint
+          - L_thumb_proximal_yaw_joint
+          - L_thumb_proximal_pitch_joint
+          - L_thumb_intermediate_joint
+          - L_thumb_distal_joint
+          - L_index_proximal_joint
+          - L_index_intermediate_joint
+          - L_middle_proximal_joint
+          - L_middle_intermediate_joint
+          - L_ring_proximal_joint
+          - L_ring_intermediate_joint
+          - L_pinky_proximal_joint
+          - L_pinky_intermediate_joint
+
+        gains:
+          # left_base_joint: {p: 100.0, i: .5, d: 5.0}
+          # left_thumb_1_joint: {p: 100.0, i: .5, d: 5.0}
+          # left_thumb_2_joint: {p: 100.0, i: .5, d: 5.0}
+          # left_thumb_3_joint: {p: 100.0, i: .5, d: 5.0}
+          # left_thumb_4_joint: {p: 100.0, i: .5, d: 5.0}
+          # left_index_1_joint: {p: 100.0, i: .5, d: 5.0}
+          # left_index_2_joint: {p: 100.0, i: .5, d: 5.0}
+          # left_middle_1_joint: {p: 100.0, i: .5, d: 5.0}
+          # left_middle_2_joint: {p: 100.0, i: .5, d: 5.0}
+          # left_ring_1_joint: {p: 100.0, i: .5, d: 5.0}
+          # left_ring_2_joint: {p: 100.0, i: .5, d: 5.0}
+          # left_little_1_joint: {p: 100.0, i: .5, d: 5.0}
+          # left_little_2_joint: {p: 100.0, i: .5, d: 5.0}
+          #L_base_link_joint: {p: 50.0, i: .01, d: .01}
+          
+          L_thumb_proximal_yaw_joint: {p: 2.0, i: .005, d: .001}
+          L_thumb_proximal_pitch_joint: {p: 2.0, i: .005, d: .001}
+          L_thumb_intermediate_joint: {p: 0.2, i: .001, d: .001}
+          L_thumb_distal_joint: {p: 0.2, i: .001, d: .001}
+
+          L_index_proximal_joint: {p: 1.0, i: .003, d: .001}
+          L_index_intermediate_joint: {p: 1.0, i: .003, d: .001}
+
+          L_middle_proximal_joint: {p: 2.0, i: .005, d: .001}
+          L_middle_intermediate_joint: {p: 2.0, i: .005, d: .001}
+          L_ring_proximal_joint: {p: 2.0, i: .005, d: .001}
+          L_ring_intermediate_joint: {p: 2.0, i: .005, d: .001}
+
+          L_pinky_proximal_joint: {p: .6, i: .003, d: .001}
+          L_pinky_intermediate_joint: {p: .6, i: .003, d: .001}
+
     # left_zero_controller:
     #     type: unitree_legged_control/UnitreeJointController
     #     joint: left_zero_joint
@@ -214,6 +307,108 @@ g1_gazebo:
           right_wrist_roll_joint: {p: 100.0, i: 0.5, d: 5.0} 
           right_wrist_pitch_joint: {p: 100.0, i: 0.5, d: 5.0} 
           right_wrist_yaw_joint: {p: 100.0, i: 0.5, d: 5.0} 
+
+    right_hand_controller:
+        action_ns: follow_joint_trajectory
+        type: effort_controllers/JointTrajectoryController
+        default: true
+        joints:
+          # - right_base_joint
+          # - right_thumb_1_joint
+          # - right_thumb_2_joint
+          # - right_thumb_3_joint
+          # - right_thumb_4_joint
+          # - right_index_1_joint
+          # - right_index_2_joint
+          # - right_middle_1_joint
+          # - right_middle_2_joint
+          # - right_ring_1_joint
+          # - right_ring_2_joint
+          # - right_little_1_joint
+          # - right_little_2_joint
+          - R_thumb_proximal_yaw_joint
+          - R_thumb_proximal_pitch_joint
+          - R_thumb_intermediate_joint
+          - R_thumb_distal_joint
+          - R_index_proximal_joint
+          - R_index_intermediate_joint
+          - R_middle_proximal_joint
+          - R_middle_intermediate_joint
+          - R_ring_proximal_joint
+          - R_ring_intermediate_joint
+          - R_pinky_proximal_joint
+          - R_pinky_intermediate_joint
+        constraints:
+          # right_base_joint: {goal: .27}
+          # right_thumb_1_joint: {goal: .27}
+          # right_thumb_2_joint: {goal: .27}
+          # right_thumb_3_joint: {goal: .27}
+          # right_thumb_4_joint: {goal: .27}
+          # right_index_1_joint: {goal: .27}
+          # right_index_2_joint: {goal: .27}
+          # right_middle_1_joint: {goal: .27}
+          # right_middle_2_joint: {goal: .27}
+          # right_ring_1_joint: {goal: .27}
+          # right_ring_2_joint: {goal: .27}
+          # right_little_1_joint: {goal: .27}
+          # right_little_2_joint: {goal: .27}
+          R_thumb_proximal_yaw_joint: {goal: .27}
+          R_thumb_proximal_pitch_joint: {goal: .27}
+          R_thumb_intermediate_joint: {goal: .27}
+          R_thumb_distal_joint: {goal: .27}
+          R_index_proximal_joint: {goal: .27}
+          R_index_intermediate_joint: {goal: .27}
+          R_middle_proximal_joint: {goal: .27}
+          R_middle_intermediate_joint: {goal: .27}
+          R_ring_proximal_joint: {goal: .27}
+          R_ring_intermediate_joint: {goal: .27}
+          R_pinky_proximal_joint: {goal: .27}
+          R_pinky_intermediate_joint: {goal: .27}
+
+        gains:
+          # right_base_joint: {p: 100.0, i: .5, d: 5.0}
+          # right_thumb_1_joint: {p: 100.0, i: .5, d: 5.0}
+          # right_thumb_2_joint: {p: 100.0, i: .5, d: 5.0}
+          # right_thumb_3_joint: {p: 100.0, i: .5, d: 5.0}
+          # right_thumb_4_joint: {p: 100.0, i: .5, d: 5.0}
+          # right_index_1_joint: {p: 100.0, i: .5, d: 5.0}
+          # right_index_2_joint: {p: 100.0, i: .5, d: 5.0}
+          # right_middle_1_joint: {p: 100.0, i: .5, d: 5.0}
+          # right_middle_2_joint: {p: 100.0, i: .5, d: 5.0}
+          # right_ring_1_joint: {p: 100.0, i: .5, d: 5.0}
+          # right_ring_2_joint: {p: 100.0, i: .5, d: 5.0}
+          # right_little_1_joint: {p: 100.0, i: .5, d: 5.0}
+          # right_little_2_joint: {p: 100.0, i: .5, d: 5.0}
+          # R_base_link_joint: {p: 2.0, i: .005, d: .002}
+          # R_thumb_proximal_yaw_joint: {p: 2.0, i: .005, d: .002}
+          # R_thumb_proximal_pitch_joint: {p: 2.0, i: .005, d: .002}
+          # R_thumb_intermediate_joint: {p: 2.0, i: .005, d: .002}
+          # R_thumb_distal_joint: {p: 2.0, i: .005, d: .002}
+          # R_index_proximal_joint: {p: 2.0, i: .005, d: .002}
+          # R_index_intermediate_joint: {p: 2.0, i: .005, d: .002}
+          # R_middle_proximal_joint: {p: 2.0, i: .005, d: .002}
+          # R_middle_intermediate_joint: {p: 2.0, i: .005, d: .002}
+          # R_ring_proximal_joint: {p: 2.0, i: .005, d: .002}
+          # R_ring_intermediate_joint: {p: 2.0, i: .005, d: .002}
+          # R_pinky_proximal_joint: {p: 2.0, i: .005, d: .002}
+          # R_pinky_intermediate_joint: {p: 2.0, i: .005, d: .002}
+
+          R_thumb_proximal_yaw_joint: {p: 2.0, i: .005, d: .001}
+          R_thumb_proximal_pitch_joint: {p: 2.0, i: .005, d: .001}
+          R_thumb_intermediate_joint: {p: 0.2, i: .001, d: .001}
+          R_thumb_distal_joint: {p: 0.2, i: .001, d: .001}
+
+          R_index_proximal_joint: {p: 1.0, i: .003, d: .001}
+          R_index_intermediate_joint: {p: 1.0, i: .003, d: .001}
+
+          R_middle_proximal_joint: {p: 2.0, i: .005, d: .001}
+          R_middle_intermediate_joint: {p: 2.0, i: .005, d: .001}
+          R_ring_proximal_joint: {p: 2.0, i: .005, d: .001}
+          R_ring_intermediate_joint: {p: 2.0, i: .005, d: .001}
+
+          R_pinky_proximal_joint: {p: .6, i: .003, d: .001}
+          R_pinky_intermediate_joint: {p: .6, i: .003, d: .001}
+
     # right_shoulder_pitch_controller: 
     #     type: unitree_legged_control/UnitreeJointController
     #     joint: right_shoulder_pitch_joint

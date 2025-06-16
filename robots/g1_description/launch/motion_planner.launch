@@ -1,0 +1,3 @@
+<launch>
+    <node name="motion_planner" pkg="g1_description" type="motion_planner.py" ns="g1_gazebo" output="screen"/>
+</launch>

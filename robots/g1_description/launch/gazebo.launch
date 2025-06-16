@@ -27,8 +27,11 @@
     <!-- Load the URDF into the ROS Parameter Server -->
 
     <param name="robot_description"
-           command="$(find xacro)/xacro --inorder '$(find g1_description)/g1_29dof_lock_waist.urdf' 
+           command="$(find xacro)/xacro --inorder '$(find g1_description)/g1_29dof_rev_1_0_with_inspire_hand_DFQ.urdf' 
            UnitreeGripper:=$(arg UnitreeGripperYN)"/> 
+
+    <param name="max_velocity_scaling_factor" value="0.3"/>
+    <param name="max_acceleration_scaling_factor" value="0.3"/>
            
     <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
     <!-- Set trunk and joint positions at startup -->
@@ -45,6 +48,10 @@
           left_arm_controller
 
           right_arm_controller
+
+          left_hand_controller
+
+          right_hand_controller
 
           torso_only_controller
 

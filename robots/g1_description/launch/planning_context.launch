@@ -6,10 +6,10 @@
   <arg name="robot_description" default="robot_description"/>
 
   <!-- Load universal robot description format (URDF) -->
-  <param if="$(arg load_robot_description)" name="$(arg robot_description)" textfile="$(find g1_description)/g1_23dof_lock_waist.urdf"/>
+  <param if="$(arg load_robot_description)" name="$(arg robot_description)" textfile="$(find g1_description)/g1_29dof_rev_1_0_with_inspire_hand_DFQ.urdf"/>
 
   <!-- The semantic description that corresponds to the URDF -->
-  <param name="$(arg robot_description)_semantic" textfile="$(find g1_description)/config/g1.srdf" />
+  <param name="$(arg robot_description)_semantic" textfile="$(find g1_description)/config/g1_29dof_rev_1_0_with_inspire_hand_DFQ.srdf" />
 
   <!-- Load updated joint limits (override information from URDF) -->
   <group ns="$(arg robot_description)_planning">
