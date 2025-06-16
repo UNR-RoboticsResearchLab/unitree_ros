@@ -116,7 +116,7 @@ g1_gazebo:
         type: effort_controllers/JointTrajectoryController
         default: true
         constraints:
-          # New
+          # FTP URDF File
           # left_base_joint: {goal: .27}
           # left_thumb_1_joint: {goal: .27}
           # left_thumb_2_joint: {goal: .27}
@@ -131,6 +131,8 @@ g1_gazebo:
           # left_little_1_joint: {goal: .27}
           # left_little_2_joint: {goal: .27}
           #L_base_link_joint: {goal: .27}
+
+          # DFQ URDF File
           L_thumb_proximal_yaw_joint: {goal: .27}
           L_thumb_proximal_pitch_joint: {goal: .27}
           L_thumb_intermediate_joint: {goal: .27}
@@ -313,6 +315,7 @@ g1_gazebo:
         type: effort_controllers/JointTrajectoryController
         default: true
         joints:
+          # FTP URDF File
           # - right_base_joint
           # - right_thumb_1_joint
           # - right_thumb_2_joint
@@ -326,6 +329,8 @@ g1_gazebo:
           # - right_ring_2_joint
           # - right_little_1_joint
           # - right_little_2_joint
+
+          # DFQ URDF File
           - R_thumb_proximal_yaw_joint
           - R_thumb_proximal_pitch_joint
           - R_thumb_intermediate_joint
